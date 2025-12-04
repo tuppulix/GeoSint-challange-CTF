@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Panorama full screen */
+#pano {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+}
+
+.pano-static img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HUD top-left */
+#hud {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 3;
+  padding: 14px 18px;
+  max-width: 460px;
+
+  background: rgba(30, 35, 40, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55);
+  color: #eee;
+}
+
+/* Challenge title */
+#chall-title {
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #00ffe1;
+}
+
+/* Result text */
+#chall-result {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* MAP BOX — small by default */
+#map-box {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+
+  width: 320px;   /* compact size */
+  height: 190px;
+
+  background: rgba(10, 14, 20, 0.92);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 3;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Hover: expand the box */
+#map-box:hover {
+  width: 820px;   /* expanded size */
+  height: 600px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.85);
+}
+
+/* Map always fills the box */
+#map {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: #0f0f0f;
+}
+
+/* Submit button */
+#submit {
+  height: 40px;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background: #00adb5;
+  color: #111827;
+
+  cursor: pointer;
+}
+
+#submit:hover {
+  filter: brightness(1.08);
+}
+
+/* MOBILE — no hover, fixed size */
+@media (max-width: 700px) {
+  #map-box {
+    width: calc(100% - 32px);
+    height: 45vh;
+  }
+
+  #map-box:hover {
+    width: calc(100% - 32px);
+    height: 45vh;
+  }
+
+  #hud {
+    max-width: calc(100% - 32px);
+  }
+}

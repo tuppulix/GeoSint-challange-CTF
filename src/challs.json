@@ -1,0 +1,38 @@
+{
+	"first": {
+		"one": {
+			"panoType": 1,
+			"lat": 0,
+			"lng": 0,
+			"maxZ": 5,
+			"flag": "ptm{redacted}"
+		}
+	},
+	"second": {
+		"two": {
+			"panoType": 1,
+			"lat": 0,
+			"lng": 0,
+			"maxZ": 5,
+			"flag": "ptm{redacted}"
+		}
+	},
+	"third": {
+		"three": {
+			"panoType": 1,
+			"lat": 0,
+			"lng": 0,
+			"maxZ": 5,
+			"flag": "ptm{redacted}"
+		}
+	},
+	"fourth": {
+		"four": {
+			"panoType": 1,
+			"lat": 0,
+			"lng": 0,
+			"maxZ": 5,
+			"flag": "ptm{redacted}"
+		}
+	}
+}

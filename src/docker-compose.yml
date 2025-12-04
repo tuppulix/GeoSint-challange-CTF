@@ -1,0 +1,10 @@
+services:
+  panoramatracemission:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6958:6958"
+    restart: unless-stopped
+  
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geosint | M0lecon Challenges</title>
+
+  <!-- Font Inter & JetBrains Mono (technical vibe) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons (Lucide) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+
+<body>
+  <header id="header">
+    <a href="#" class="logo-container">
+      <!-- SVG fallback icon if the main logo fails -->
+      <svg id="logo" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <h1 id="title">Geosint M0lecon</h1>
+    </a>
+    <div class="header-status">
+      <div class="status-dot"></div>
+      <span>SYSTEM PTM ONLINE</span>
+    </div>
+  </header>
+
+  <div id="main-body">
+
+    <!-- Challenges container -->
+    <div id="competitions">
+      <!-- Cards injected via JavaScript -->
+      <div style="text-align:center; color: var(--text-muted); padding: 2rem;">
+        <i data-lucide="loader-2" class="animate-spin"></i> updating challenges...
+      </div>
+    </div>
+
+    <!-- Instructions column -->
+    <aside id="instructions">
+      <div class="instructions-header">
+        <i data-lucide="terminal-square" size="24"></i>
+        <h2>Mission Briefing</h2>
+      </div>
+
+      <p>
+        Hello there, player. You’re probably wondering how you ended up in this challenge.
+        Honestly… don’t ask me. You’re already here, so you might as well try to solve it.
+        Who knows — you might even get a flag out of it. Points are nice, right?
+      </p>
+
+      <p>
+        To submit a guess, click on the mini-map and hit <b>"Submit"</b>.
+        You’ll receive:
+      </p>
+
+      <ul class="status-list">
+        <li>
+          <i data-lucide="x-circle" size="16" color="#ef4444"></i>
+          <span>"no..." — <span class="badge-no">WRONG LOCATION</span></span>
+        </li>
+        <li>
+          <i data-lucide="check-circle-2" size="16" color="#22c55e"></i>
+          <span>"yes + flag" — <span class="badge-yes">ACCESS GRANTED</span></span>
+        </li>
+      </ul>
+      <div class="instructions-flag-format">
+        <p>The flag is in the format:</p>
+        <p><code>ptm{[easy][medium][hard][final_boss]}</code></p>
+      </div>
+      <p class="instructions-footnote">
+        That's all. Time to see how good your Geo-OSINT skills really are.
+      </p>
+      <p>I almost forgot, don't spam...</p>
+    </aside>
+
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Geosint challenge</title>
+
+  <!-- CSS ONLY for the challenge -->
+  <link rel="stylesheet" href="/css/chall.css">
+
+  <!-- Leaflet CSS (no integrity) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Photo Sphere Viewer v4 CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"
+  />
+</head>
+
+<body onload="initialize();">
+  <!-- panorama full screen -->
+  <div id="pano"></div>
+
+  <!-- HUD -->
+  <div id="hud">
+    <p id="chall-title"></p>
+    <p id="chall-result"></p>
+  </div>
+
+  <!-- map + submit -->
+  <div id="map-box">
+    <div id="map"></div>
+    <button id="submit" onclick="submitGuess();">Submit guess</button>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Leaflet JS (NO integrity, NO crossorigin) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Photo Sphere Viewer v4 deps -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+
+  <!-- challenge logic -->
+  <script src="/js/chall.js"></script>
+</body>
+</html>
