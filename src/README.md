@@ -31,42 +31,6 @@ Customised Geo-OSINT challenge board inspired by GeoGuessr. Players explore 360�
 └── chall.html            # Challenge play view
 ```
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm (ships with Node)
-
-### Install dependencies
-
-```sh
-npm install body-parser cookie-parser express jsdom node-fetch@2 @photo-sphere-viewer/core
-```
-
-### Run locally
-
-```sh
-npm start
-# or
-node server.js
-```
-
-The server listens on `http://localhost:6958`.
-
-### Docker / Compose
-
-```sh
-docker compose up --build
-```
-
-Composable setup builds the image and publishes port `6958`. The plain Docker alternative is:
-
-```sh
-docker build -t geosint .
-docker run --rm -p 6958:6958 geosint
-```
-
 ## Challenge Data
 
 ### `public/info.json`
@@ -75,11 +39,11 @@ Public catalogue used by the landing page. Keys are difficulty “competitions�
 
 ```json
 {
-        "easy": {
-                "sea": { "img": "thumb.png" }
+        "first": {
+                "one": { "img": "thumb.png" }
         },
-        "hard": {
-                "cautela": { "img": "thumb.png" }
+        "second": {
+                "two": { "img": "thumb.png" }
         }
 }
 ```
@@ -90,8 +54,8 @@ Private metadata loaded server-side. Each entry must match the slug used in `inf
 
 ```json
 {
-        "hard": {
-                "cautela": {
+        "second": {
+                "two": {
                         "panoType": 1,
                         "lat": xx.xxxx,
                         "lng": xx.xxxx,
@@ -131,9 +95,6 @@ Ensure folder names match the slugs in both JSON files.
 - Responses include a cooldown timer when the limit is hit.
 - Adjust behaviour in `checkChallengeRateLimit` (e.g., change window or bucket key) as needed.
 
-## Panorama Retrieval (Optional)
-
-Legacy scripts `pull_challs.js` and `pull_challs_fast.js` remain available if you want to fetch Google Street View tiles automatically. They expect entries in `challs.json` with `pano` IDs and will populate the `public/img` folders. For pre-rendered/static scenes you can ignore these scripts and simply supply your own `pano.jpg`.
 
 ## Credits
 
